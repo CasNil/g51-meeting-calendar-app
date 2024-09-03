@@ -42,7 +42,7 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public Optional<User> finByUsername(String username) {
+    public Optional<User> findByUsername(String username) {
         String query = "select * from users where username = ?";
 
         try (

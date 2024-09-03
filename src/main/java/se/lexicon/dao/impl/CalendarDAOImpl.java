@@ -22,7 +22,7 @@ public class CalendarDAOImpl implements CalendarDAO {
 
     @Override
     public Collection<Calendar> findCalendarByUsername(String username) {
-        return List.of();
+        return null;
     }
 
     @Override

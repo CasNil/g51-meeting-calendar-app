@@ -6,6 +6,6 @@ public class MySQLException extends RuntimeException {
     }
 
     public MySQLException(String message, Throwable cause) {
-        super(message, cause);
+        super(message,cause);
     }
 }

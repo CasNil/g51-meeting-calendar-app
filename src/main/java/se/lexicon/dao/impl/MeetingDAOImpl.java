@@ -20,7 +20,7 @@ public class MeetingDAOImpl implements MeetingDAO {
 
     @Override
     public Collection<Meeting> findAllMeetingsByCalendarId(int calendarId) {
-        return List.of();
+        return null;
     }
 
     @Override
