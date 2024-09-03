@@ -9,15 +9,15 @@ public class Calendar {
     private List<Meeting> meetings;
     private String username;
 
-    public Calendar(String username, String title) {
-        this.username = username;
+
+    public Calendar(String title, String username) {
         this.title = title;
+        this.username = username;
     }
 
     public Calendar(int id, String title, String username) {
         this(title, username);
         this.id = id;
-
     }
 
     public int getId() {
@@ -39,11 +39,12 @@ public class Calendar {
 
     public void addMeeting(Meeting meeting) {
         if (meetings == null) meetings = new ArrayList<>();
+        //todo check if meeting exist in meetings list
         meetings.add(meeting);
     }
 
     public void removeMeeting(Meeting meeting) {
-        if (meetings == null) throw new IllegalArgumentException("Meeting list is empty");
+        if (meetings == null) throw new IllegalArgumentException("Meeting list is null.");
         if (meeting == null) throw new IllegalArgumentException("Meeting data is null");
         meetings.remove(meeting);
     }
@@ -51,10 +52,10 @@ public class Calendar {
     public String calendarInfo() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Calendar info: ").append("\n");
-        stringBuilder.append("Id: ").append("\n");
-        stringBuilder.append("Title: ").append("\n");
-        stringBuilder.append("Meetings: ").append("\n");
-        stringBuilder.append("Username: ").append("\n");
+        stringBuilder.append("Id ").append(id).append("\n");
+        stringBuilder.append("Title ").append(title).append("\n");
+        stringBuilder.append("Username ").append(username).append("\n");
         return stringBuilder.toString();
     }
+
 }

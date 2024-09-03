@@ -6,12 +6,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class CalendarDBConnection {
+public class OracleDBConnection {
 
     private static final String DB_NAME = "g51_meeting_calendar_db";
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/" + DB_NAME;
+    private static final String JDBC_URL = "jdbc:oracle://localhost:3306/" + DB_NAME;
     private static final String JDBC_USERNAME = "root";
-    private static final String JDBC_PASSWORD = "1234";
+    private static final String JDBC_PASSWORD = "1234negar";
 
 
     public static Connection getConnection() {

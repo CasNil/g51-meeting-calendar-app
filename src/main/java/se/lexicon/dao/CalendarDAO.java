@@ -15,4 +15,5 @@ public interface CalendarDAO {
     Optional<Calendar> findByTitleAndUsername(String title, String username);
 
     boolean deleteCalendar(int id);
+
 }

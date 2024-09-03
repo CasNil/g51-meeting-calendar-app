@@ -9,8 +9,8 @@ import java.util.Optional;
 public interface UserDAO {
     User createUser(String username);
 
-    Optional<User> findByUsername(String username);
+    Optional<User> finByUsername(String username);
 
-    boolean authenticate(User user)
-            throws AuthenticationFailedException, UserExpiredException;
+    boolean authenticate(User user) throws AuthenticationFailedException, UserExpiredException;
+
 }
